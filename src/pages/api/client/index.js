@@ -31,7 +31,7 @@ export const client_error_codes = [
   { code: 431, name: "Request Header Fields Too Large" },
   { code: 451, name: "Unavailable For Legal Reasons" },
 ];
-export default async function clientCodes(req, res) {
+export default async function clientStatus(req, res) {
 
   const data = client_error_codes.map(({ code, name }) => {
     return {

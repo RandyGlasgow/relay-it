@@ -1,6 +1,7 @@
 import successStatus from "./success/[code]";
 import serverStatus from "./server/[code]";
 import rateLimit from "@/utils/rate-limit";
+import clientStatus from "./client/[code]";
 // universal endpoint for all possible http codes
 
 const limiter = rateLimit({
@@ -16,6 +17,8 @@ export default async function statusHandler(req, res) {
 
     if (statusCode < 300) {
       successStatus(req, res);
+    } else if (statusCode < 500) {
+      clientStatus(req, res);
     } else if (statusCode < 600) {
       serverStatus(req, res);
     }
