@@ -1,7 +1,7 @@
 export default async function handler(req, res) {
   // the code requested by the user
   const requestCode = req.query.code;
-  const url = `${process.env.API_URL}/api/success/${requestCode}`;
+  const url = `https://${req.headers.host}/api/success/${requestCode}`;
   console.log(url);
   if (requestCode < 200) {
     // not implemented yet
