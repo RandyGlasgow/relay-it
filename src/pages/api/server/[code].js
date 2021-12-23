@@ -6,7 +6,7 @@ const limiter = rateLimit({
   uniqueTokenPerInterval: 500, // Max 500 users per second
 });
 
-export default async function handler(req, res) {
+export default async function serverStatus(req, res) {
   try {
     await limiter.check(res, 10, "CACHE_TOKEN"); // 10 requests per minute
     switch (req.query.code) {
