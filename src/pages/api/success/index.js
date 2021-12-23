@@ -17,7 +17,7 @@ export default async function handler(req, res) {
     return {
       name: code.name,
       code: code.code,
-      url: `${req.headers.host}/api/success/${code.code}`,
+      url: `https://${req.headers.host}/api/success/${code.code}`,
     };
   });
   res.status(200).json(data);
