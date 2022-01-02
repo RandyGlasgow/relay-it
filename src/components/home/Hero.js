@@ -51,14 +51,12 @@ export default function Hero() {
             changing the way you work. All the HTTP response status codes
             available from one convenient API.
           </blockquote>
-          <button>
-            <Link href='/docs'>
-              <a className={styles.callToAction}>
-                Let&apos;s get started
-                <FaArrowRight />{" "}
-              </a>
-            </Link>
-          </button>
+          <Link href='/docs'>
+            <a className={styles.callToAction}>
+              Let&apos;s get started
+              <FaArrowRight />{" "}
+            </a>
+          </Link>
         </div>
       </div>
     </>

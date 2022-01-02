@@ -2,7 +2,7 @@
 /* set the container background to be an image */
 .container {
   @apply min-h-screen w-full overflow-hidden flex flex-col justify-center items-center;
-  background-image: url("../public/abstract.png");
+  background-image: url("../public/abstract.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

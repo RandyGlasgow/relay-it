@@ -31,16 +31,17 @@ export default function Navbar() {
       <HomeButton />
       <ul>
         {menuOptions.map((option) => (
-          <li
-            className={
-              isActiveRoute(option.href)
-                ? styles.navButtonActive
-                : styles.navButton
-            }
-            key={option.name}
-          >
+          <li key={option.name}>
             <Link href={option.href}>
-              <a>{option.name}</a>
+              <a
+                className={
+                  isActiveRoute(option.href)
+                    ? styles.navButtonActive
+                    : styles.navButton
+                }
+              >
+                {option.name}
+              </a>
             </Link>
           </li>
         ))}

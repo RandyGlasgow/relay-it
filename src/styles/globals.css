@@ -19,3 +19,7 @@ a {
 * {
   box-sizing: border-box;
 }
+
+*:focus {
+  @apply outline-offset-2 outline-lime-400 outline-2 outline;
+}
