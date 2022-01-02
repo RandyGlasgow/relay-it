@@ -1,14 +1,14 @@
 .nav {
-  @apply fixed top-0 w-full flex justify-center items-center;
+  @apply absolute top-0 w-full flex justify-center items-center;
 }
 .nav ul {
   @apply flex justify-end items-center gap-4 w-full max-w-6xl py-4;
 }
 .nav .navButton {
-  @apply text-gray-50 font-mono px-2 transform transition-all duration-100 ease-in-out border-b border-transparent flex;
+  @apply text-gray-50 font-mono px-2 transform transition-all duration-100 ease-in-out border-b-2 border-transparent flex;
 }
 .nav .navButton:hover {
-  @apply text-gray-900 bg-lime-200 bg-opacity-20 rounded-md border-b border-lime-400;
+  @apply text-gray-900 bg-lime-200 bg-opacity-20 rounded-md border-b-2 border-lime-400;
 }
 
 .nav .navButtonActive {
@@ -20,5 +20,5 @@
 }
 
 .nav .homeButton:hover {
-  @apply text-gray-900 bg-lime-200 bg-opacity-20 rounded-md border-b border-lime-400;
+  @apply text-gray-900 bg-lime-200 bg-opacity-20 rounded-md border-b-2 border-lime-400;
 }

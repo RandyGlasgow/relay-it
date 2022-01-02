@@ -7,6 +7,7 @@ export default function Home() {
     <>
       <Navbar />
       <Hero />
+      <div className='h-screen'></div>
     </>
   );
 }

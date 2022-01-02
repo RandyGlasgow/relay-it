@@ -12,10 +12,12 @@ const menuOptions = [
 
 const HomeButton = () => {
   return (
-    <button className={styles.homeButton}>
-      <FaBroadcastTower />
-      Relay It
-    </button>
+    <Link href={`/`}>
+      <a className={styles.homeButton}>
+        <FaBroadcastTower />
+        Relay It
+      </a>
+    </Link>
   );
 };
 
