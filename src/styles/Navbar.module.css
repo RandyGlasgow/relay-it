@@ -1,0 +1,24 @@
+.nav {
+  @apply fixed top-0 w-full flex justify-center items-center;
+}
+.nav ul {
+  @apply flex justify-end items-center gap-4 w-full max-w-6xl py-4;
+}
+.nav .navButton {
+  @apply text-gray-50 font-mono px-2 transform transition-all duration-100 ease-in-out border-b border-transparent flex;
+}
+.nav .navButton:hover {
+  @apply text-gray-900 bg-lime-200 bg-opacity-20 rounded-md border-b border-lime-400;
+}
+
+.nav .navButtonActive {
+  @apply text-gray-900 bg-lime-200 bg-opacity-20 rounded-md border-b border-transparent border-lime-400;
+}
+
+.nav .homeButton {
+  @apply text-gray-50 font-mono flex justify-center items-center gap-2 px-2 min-w-max transform transition-all duration-100 ease-in-out border-b border-transparent;
+}
+
+.nav .homeButton:hover {
+  @apply text-gray-900 bg-lime-200 bg-opacity-20 rounded-md border-b border-lime-400;
+}

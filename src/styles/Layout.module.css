@@ -1,6 +1,5 @@
 .container {
   @apply col-span-9 xl:col-span-10 p-4 w-[95%] text-stone-700;
-  height: 300vh;
 }
 /* Styling for a sidebar */
 .sidebar {

@@ -1,0 +1,33 @@
+
+/* set the container background to be an image */
+.container {
+  @apply min-h-screen w-full overflow-hidden flex flex-col justify-center items-center;
+  background-image: url("../public/abstract.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.content {
+  @apply max-w-6xl flex flex-col justify-center items-center;
+}
+
+.headline {
+  @apply text-5xl text-gray-50 font-semibold max-w-5xl text-center;
+  /* text shadow */
+  text-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.25);
+}
+
+.about{
+  @apply max-w-3xl text-center font-mono mt-10 text-gray-50;
+}
+
+.http:hover {
+  @apply underline underline-offset-1 cursor-pointer;
+}
+
+.callToAction {
+  @apply flex justify-center items-center gap-2 transform transition-all duration-100 ease-in-out rounded-full px-4 py-2 mt-20 text-gray-50 bg-blue-400 font-bold shadow-sm;
+}
+.callToAction:hover {
+  @apply text-gray-800 bg-lime-400;
+}
