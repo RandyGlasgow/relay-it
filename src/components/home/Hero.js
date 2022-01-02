@@ -54,7 +54,7 @@ export default function Hero() {
           <button>
             <Link href='/docs'>
               <a className={styles.callToAction}>
-                Let's get started
+                Let&apos;s get started
                 <FaArrowRight />{" "}
               </a>
             </Link>
