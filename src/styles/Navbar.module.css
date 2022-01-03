@@ -5,7 +5,7 @@
   @apply flex justify-end items-center gap-4 w-full max-w-6xl py-4;
 }
 .nav .navButton {
-  @apply text-gray-50 font-mono px-2 transform transition-all duration-100 ease-in-out border-b-2 border-transparent flex;
+  @apply text-gray-50 font-mono p-2 px-3 transform transition-all duration-100 ease-in-out border-b-2 border-transparent flex justify-center items-center gap-2;
 }
 .nav .navButton:hover {
   @apply text-gray-900 bg-lime-200 bg-opacity-20 rounded-md border-b-2 border-lime-400;
@@ -16,7 +16,7 @@
 }
 
 .nav .homeButton {
-  @apply text-gray-50 font-mono flex justify-center items-center gap-2 px-2 min-w-max transform transition-all duration-100 ease-in-out border-b border-transparent;
+  @apply text-gray-50 font-mono flex justify-center items-center gap-2 p-2 px-3 min-w-max transform transition-all duration-100 ease-in-out border-b border-transparent;
 }
 
 .nav .homeButton:hover {

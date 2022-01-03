@@ -1,6 +1,6 @@
 import styles from "@/styles/Navbar.module.css";
 import Link from "next/link";
-import { FaBroadcastTower } from "react-icons/fa";
+import { FaBroadcastTower, FaGithubAlt } from "react-icons/fa";
 import { useRouter } from "next/router";
 
 // menu options
@@ -21,6 +21,37 @@ const HomeButton = () => {
   );
 };
 
+const GithubButton = ({ active }) => {
+  return (
+    <a
+      className={styles.navButton}
+      href='#'
+      target='_blank'
+      rel='noopener noreferrer'
+    >
+      <FaGithubAlt /> GitHub
+    </a>
+  );
+};
+
+const DocsButton = ({ active }) => {
+  return (
+    <Link href='/docs'>
+      <a className={active ? styles.navButtonActive : styles.navButton}>Docs</a>
+    </Link>
+  );
+};
+
+const ExamplesButton = ({ active }) => {
+  return (
+    <Link href='/examples'>
+      <a className={active ? styles.navButtonActive : styles.navButton}>
+        Examples
+      </a>
+    </Link>
+  );
+};
+
 export default function Navbar() {
   const router = useRouter();
 
@@ -32,21 +63,9 @@ export default function Navbar() {
     <nav className={styles.nav}>
       <HomeButton />
       <ul>
-        {menuOptions.map((option) => (
-          <li key={option.name}>
-            <Link href={option.href}>
-              <a
-                className={
-                  isActiveRoute(option.href)
-                    ? styles.navButtonActive
-                    : styles.navButton
-                }
-              >
-                {option.name}
-              </a>
-            </Link>
-          </li>
-        ))}
+        <DocsButton active={isActiveRoute("/docs")} />
+        <ExamplesButton active={isActiveRoute("/examples")} />
+        <GithubButton />
       </ul>
     </nav>
   );
