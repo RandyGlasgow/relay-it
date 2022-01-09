@@ -1,3 +1,164 @@
+export const CONTINUE_100 = {
+  status: 100,
+  name: "Continue",
+  message:
+    "This interim response indicates that the client should continue the request or ignore the response if the request is already finished.",
+};
+
+export const SWITCHING_PROTOCOLS_101 = {
+  status: 101,
+  name: "Switching Protocols",
+  message:
+    "This code is sent in response to an 'Upgrade' request header from the client and indicates the protocol the server is switching to.",
+};
+
+export const PROCESSING_102 = {
+  status: 102,
+  name: "Processing",
+  message:
+    "This code indicates that the server has received and is processing the request, but no response is available yet.",
+};
+
+export const EARLY_HITS_103 = {
+  status: 103,
+  name: "Early Hits",
+  message:
+    "This status code is primarily intended to be used with the 'Link' header, letting the user agent start preloading resources while the server prepares a response.",
+};
+
+export const OK_200 = {
+  status: 200,
+  name: "OK",
+  message:
+    "The request succeeded. The result meaning of 'Success' depends on the HTTP method",
+};
+
+export const CREATED_201 = {
+  status: 201,
+  name: "Created",
+  message:
+    "The request succeeded, and a new resource was created as a result. This is typically the response sent after 'POST' requests, or some 'PUT' requests",
+};
+
+export const ACCEPTED_202 = {
+  status: 202,
+  name: "Accepted",
+  message:
+    "The request has been received but not yet acted upon. It is noncommittal, since there is no way in HTTP to later send an asynchronous response indicating the outcome of the request. It is intended for cases where another process or server handles the request, or for batch processing.",
+};
+
+export const NON_AUTHORITATIVE_INFORMATION_203 = {
+  status: 203,
+  name: "Non-Authoritative Information",
+  message:
+    "This response code means the returned metadata is not exactly the same as is available from the origin server, but is collected from a local or a third-party copy. This is mostly used for mirrors or backups of another resource. Except for that specific case, the 200 OK response is preferred to this status.",
+};
+
+export const NO_CONTENT_204 = {
+  status: 204,
+  name: "No Content",
+  message:
+    "There is no content to send for this request, but the headers may be useful. The user agent may update its cached headers for this resource with the new ones.",
+};
+
+export const RESET_CONTENT_205 = {
+  status: 205,
+  name: "Reset Content",
+  message:
+    "Tells the user agent to reset the document which sent this request.",
+};
+
+export const PARTIAL_CONTENT_206 = {
+  status: 206,
+  name: "Partial Content",
+  message:
+    "This response code is used when the 'Range' header is sent from the client to request only part of a resource.",
+};
+
+export const MULTI_STATUS_207 = {
+  status: 207,
+  name: "Multi-Status",
+  message:
+    "Conveys information about multiple resources, for situations where multiple status codes might be appropriate.",
+};
+
+export const ALREADY_REPORTED_208 = {
+  status: 208,
+  name: "Already Reported",
+  message:
+    "Used inside a '<dav:propstat>' response element to avoid repeatedly enumerating the internal members of multiple bindings to the same collection.",
+};
+
+export const IM_USED_226 = {
+  status: 226,
+  name: "IM Used",
+  message:
+    "The server has fulfilled a 'GET' request for the resource, and the response is a representation of teh result of one or more instance-manipulations applied to the current instance.",
+};
+
+export const MULTIPLE_CHOICE_300 = {
+  status: 300,
+  name: "Multiple Choice",
+  message:
+    "The request has more than one possible response. The user agent or user should choose one of them. (There is no standardized way of choosing one of the responses, but HTML links to the possibilities are recommended so the user can pick.)",
+};
+
+export const MOVED_PERMANENTLY_301 = {
+  status: 301,
+  name: "Moved Permanently",
+  message:
+    "The URL of the requested resource has been changed permanently. The new URL is given in the response.",
+};
+
+export const FOUND_302 = {
+  status: 302,
+  name: "Found",
+  message:
+    "This response code means that the URI of requested resource has been changed temporarily. Further changes in the URI might be made in the future. Therefore, this same URI should be used by the client in future requests.",
+};
+
+export const SEE_OTHER_303 = {
+  status: 303,
+  name: "See Other",
+  message:
+    "The server sent this response to direct the client to get the requested resource at another URI with a GET request.",
+};
+
+export const NOT_MODIFIED_304 = {
+  status: 304,
+  name: "Not Modified",
+  message:
+    "This is used for caching purposes. It tells the client that the response has not been modified, so the client can continue to use the same cached version of the response.",
+};
+
+export const USE_PROXY_305 = {
+  status: 305,
+  name: "Use Proxy",
+  message:
+    "Defined in a previous version of the HTTP specification to indicate that a requested response must be accessed by a proxy. It has been deprecated due to security concerns regarding in-band configuration of a proxy.",
+};
+
+export const UNUSED_306 = {
+  status: 306,
+  name: "Unused",
+  message:
+    "This response code is no longer used; it is just reserved. It was used in a previous version of the HTTP/1.1 specification.",
+};
+
+export const TEMPORARY_REDIRECT_307 = {
+  status: 307,
+  name: "Temporary Redirect",
+  message:
+    "The server sends this response to direct the client to get the requested resource at another URI with same method that was used in the prior request. This has the same semantics as the 302 Found HTTP response code, with the exception that the user agent must not change the HTTP method used: if a 'POST' was used in the first request, a 'POST' must be used in the second request.",
+};
+
+export const PERMANENT_REDIRECT_308 = {
+  status: 308,
+  name: "Permanent Redirect",
+  message:
+    "This means that the resource is now permanently located at another URI, specified by the Location: HTTP Response header. This has the same semantics as the 301 Moved Permanently HTTP response code, with the exception that the user agent must not change the HTTP method used: if a 'POST' was used in the first request, a 'POST' must be used in the second request.",
+};
+
 export const BAD_REQUEST_400 = {
   status: 400,
   name: "Bad Request",
@@ -183,6 +344,31 @@ export const UNAVAILABLE_FOR_LEGAL_REASONS_451 = {
 };
 
 export const response = {
+  100: CONTINUE_100,
+  101: SWITCHING_PROTOCOLS_101,
+  // 102: PROCESSING_102,
+  // 103: EARLY_HITS_103,
+  200: OK_200,
+  201: CREATED_201,
+  202: ACCEPTED_202,
+  203: NON_AUTHORITATIVE_INFORMATION_203,
+  204: NO_CONTENT_204,
+  205: RESET_CONTENT_205,
+  206: PARTIAL_CONTENT_206,
+  207: MULTI_STATUS_207,
+  208: ALREADY_REPORTED_208,
+  226: IM_USED_226,
+
+  300: MULTIPLE_CHOICE_300,
+  301: MOVED_PERMANENTLY_301,
+  302: FOUND_302,
+  303: SEE_OTHER_303,
+  304: NOT_MODIFIED_304,
+  305: USE_PROXY_305,
+  306: UNUSED_306,
+  307: TEMPORARY_REDIRECT_307,
+  308: PERMANENT_REDIRECT_308,
+
   400: BAD_REQUEST_400,
   401: UNAUTHORIZED_401,
   402: FORBIDDEN_403,
@@ -197,19 +383,18 @@ export const response = {
   412: PRECONDITION_FAILED_412,
   413: PAYLOAD_TOO_LARGE_413,
   414: URI_TOO_LONG_414,
-  415:UNSUPPORTED_MEDIA_TYPE_415,
-  416:RANGE_NOT_SATISFIABLE_416,
-  417:EXPECTATION_FAILED_417,
-  418:IM_A_TEAPOT_418,
-  421:MISDIRECTED_REQUEST_421,
-  422:UNPROCESSABLE_ENTITY_422,
-  423:LOCKED_423,
-  424:FAILED_DEPENDENCY_424,
-  425:TOO_EARLY_425,
-  426:UPGRADE_REQUIRED_426,
-  428:PRECONDITION_REQUIRED_428,
-  429:TOO_MANY_REQUESTS_429,
-  431:REQUEST_HEADER_FIELDS_TOO_LARGE_431,
-  451:UNAVAILABLE_FOR_LEGAL_REASONS_451,
-  
+  415: UNSUPPORTED_MEDIA_TYPE_415,
+  416: RANGE_NOT_SATISFIABLE_416,
+  417: EXPECTATION_FAILED_417,
+  418: IM_A_TEAPOT_418,
+  421: MISDIRECTED_REQUEST_421,
+  422: UNPROCESSABLE_ENTITY_422,
+  423: LOCKED_423,
+  424: FAILED_DEPENDENCY_424,
+  425: TOO_EARLY_425,
+  426: UPGRADE_REQUIRED_426,
+  428: PRECONDITION_REQUIRED_428,
+  429: TOO_MANY_REQUESTS_429,
+  431: REQUEST_HEADER_FIELDS_TOO_LARGE_431,
+  451: UNAVAILABLE_FOR_LEGAL_REASONS_451,
 };
