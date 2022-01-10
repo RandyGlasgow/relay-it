@@ -9,7 +9,7 @@ export default function About() {
 
       <blockquote className={styles.quote}>
         <p>
-          Don&apos;t wast your time hard coding a response type. Instead, write
+          Don&apos;t waste your time hard coding response types. Instead, write
           code that makes sense in the context of your application. Use your
           endpoints, your data, and your logic; Let us handle the{" "}
           <span className={styles.callout}>REST</span>.
