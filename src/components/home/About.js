@@ -11,7 +11,7 @@ export default function About() {
         <p>
           Don&apos;t wast your time hard coding a response type. Instead, write
           code that makes sense in the context of your application. Use your
-          endpoints, your data, and your logic and let us handle the{" "}
+          endpoints, your data, and your logic; Let us handle the{" "}
           <span className={styles.callout}>REST</span>.
         </p>
       </blockquote>
