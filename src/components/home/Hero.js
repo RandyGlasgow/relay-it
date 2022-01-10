@@ -1,10 +1,7 @@
 import Link from "next/link";
-import Image from "next/image";
 import styles from "@/styles/Hero.module.css";
-import backgroundImage from "@/public/abstract.png";
 import { FaArrowRight } from "react-icons/fa";
 import { useRef } from "react";
-import Navbar from "../Navbar";
 
 export default function Hero() {
   const httpRef = useRef();
@@ -30,35 +27,33 @@ export default function Hero() {
   };
 
   return (
-    <>
-      <div className={styles.container} onMouseMove={handleMouseMove}>
-        <div className={styles.content}>
-          <h1 className={styles.headline}>
-            Develop better code, faster with an API to help you test any{" "}
-            <a
-              target='_blank'
-              rel='noopener noreferrer'
-              href='https://developer.mozilla.org/en-US/docs/Web/HTTP/Status'
-              className={styles.http}
-              ref={httpRef}
-            >
-              HTTP
-            </a>{" "}
-            response you need.
-          </h1>
-          <blockquote className={styles.about}>
-            A utility first API that helps you write better code without
-            changing the way you work. All the HTTP response status codes
-            available from one convenient API.
-          </blockquote>
-          <Link href='/docs'>
-            <a className={styles.callToAction}>
-              Let&apos;s get started
-              <FaArrowRight />{" "}
-            </a>
-          </Link>
-        </div>
+    <section className={styles.container} onMouseMove={handleMouseMove}>
+      <div className={styles.content}>
+        <h1 className={styles.headline}>
+          Develop better code, faster with an API to help you test any{" "}
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://developer.mozilla.org/en-US/docs/Web/HTTP/Status'
+            className={styles.http}
+            ref={httpRef}
+          >
+            HTTP
+          </a>{" "}
+          response you need.
+        </h1>
+        <blockquote className={styles.about}>
+          A utility first API that helps you write better code without changing
+          the way you work. All the HTTP response status codes available from
+          one convenient API.
+        </blockquote>
+        <Link href='/docs'>
+          <a className={styles.callToAction}>
+            Let&apos;s get started
+            <FaArrowRight />{" "}
+          </a>
+        </Link>
       </div>
-    </>
+    </section>
   );
 }

@@ -1,19 +1,13 @@
-import Head from "next/head";
-
-import { FaBroadcastTower, FaGithubAlt } from "react-icons/fa";
-import styles from "@/styles/Home.module.css";
-import Navbar from "@/components/Navbar";
+import About from "@/components/home/About";
 import Hero from "@/components/home/Hero";
+import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
-    <>
-      <Head>
-        <title>Relay It</title>
-      </Head>
+    <div>
       <Navbar />
       <Hero />
-      <div className={styles.content}>test</div>
-    </>
+      <About />
+    </div>
   );
 }
