@@ -1,0 +1,14 @@
+.container {
+  @apply h-screen bg-gray-50 mx-auto max-w-5xl text-center p-4;
+}
+
+.header {
+  @apply text-center text-3xl text-gray-800 font-bold pt-20;
+}
+
+.quote {
+  @apply text-center text-lg text-gray-800 font-normal mt-20;
+}
+.callout {
+  @apply font-mono;
+}

@@ -1,24 +1,50 @@
-.nav {
-  @apply absolute top-0 w-full flex justify-center items-center;
+.largeDevice {
+  @apply hidden lg:flex absolute top-0 w-full justify-center items-center;
 }
-.nav ul {
+.largeDevice ul {
   @apply flex justify-end items-center gap-4 w-full max-w-6xl py-4;
 }
-.nav .navButton {
+.largeDevice .navButton {
   @apply text-gray-50 font-mono p-2 px-3 transform transition-all duration-100 ease-in-out border-b-2 border-transparent flex justify-center items-center gap-2;
 }
-.nav .navButton:hover {
+.largeDevice .navButton:hover {
   @apply text-gray-900 bg-lime-200 bg-opacity-20 rounded-md border-b-2 border-lime-400;
 }
 
-.nav .navButtonActive {
+.largeDevice .navButtonActive {
   @apply text-gray-900 bg-lime-200 bg-opacity-20 rounded-md border-b border-transparent border-lime-400;
 }
 
-.nav .homeButton {
+.largeDevice .homeButton {
   @apply text-gray-50 font-mono flex justify-center items-center gap-2 p-2 px-3 min-w-max transform transition-all duration-100 ease-in-out border-b border-transparent;
 }
 
-.nav .homeButton:hover {
+.largeDevice .homeButton:hover {
   @apply text-gray-900 bg-lime-200 bg-opacity-20 rounded-md border-b-2 border-lime-400;
+}
+
+.smallDevice {
+  @apply px-4 lg:hidden absolute top-0 w-full flex justify-between items-center text-gray-50;
+}
+
+.smallDevice .menuButton {
+  @apply text-3xl p-2 m-1 rounded-md transform transition-all duration-100 ease-in-out;
+}
+.smallDevice .menuButton:hover {
+  @apply bg-white text-gray-900 bg-opacity-70 shadow-md;
+}
+.smallDevice .menuButtonActive {
+  @apply bg-white text-gray-900 bg-opacity-70 shadow-md;
+  @apply text-3xl p-2 m-1 rounded-md transform transition-all duration-100 ease-in-out;
+}
+
+.smallDevice .menu {
+  @apply absolute right-0 mx-4 p-4 origin-top bg-white rounded-md focus:outline-transparent bg-opacity-70 shadow-md text-gray-900;
+}
+
+.smallDevice .homeButton {
+  @apply flex justify-between items-center gap-2;
+}
+.smallDevice .homeButton {
+ 
 }
