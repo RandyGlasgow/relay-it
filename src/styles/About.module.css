@@ -1,5 +1,5 @@
 .container {
-  @apply h-screen bg-gray-50 mx-auto max-w-5xl text-center p-4;
+  @apply h-screen mx-auto max-w-5xl text-center p-4;
 }
 
 .header {
@@ -7,8 +7,8 @@
 }
 
 .quote {
-  @apply text-center text-lg text-gray-800 font-normal mt-20;
+  @apply text-center text-lg text-gray-800 font-mono mt-10;
 }
 .callout {
-  @apply font-mono;
+  @apply font-semibold;
 }

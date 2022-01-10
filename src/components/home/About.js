@@ -2,7 +2,6 @@ import styles from "@/styles/About.module.css";
 import { useState } from "react";
 
 export default function About() {
-  const [response, setResponse] = useState(200);
 
   return (
     <section className={styles.container}>
@@ -13,7 +12,7 @@ export default function About() {
           Don&apos;t wast your time hard coding a response type. Instead, write
           code that makes sense in the context of your application. Use your
           endpoints, your data, and your logic and let us handle the{" "}
-          <span className={styles.callout}>REST {response}</span>.
+          <span className={styles.callout}>REST</span>.
         </p>
       </blockquote>
       <blockquote></blockquote>
