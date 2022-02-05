@@ -27,7 +27,6 @@ export default function handler(req, res) {
   const body = req.body;
 
   if (body) {
-    console.log(body);
     return res.status(responseData.status).send(req.body);
   }
   // respond with the desired response status and its description
