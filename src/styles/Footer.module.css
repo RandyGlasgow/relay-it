@@ -1,0 +1,21 @@
+.container {
+  @apply mx-auto p-4 py-10 text-center py-12 bg-blue-50;
+}
+
+.heading {
+  @apply text-xl font-bold border-t pt-6;
+}
+.buttonContainer {
+  @apply flex justify-center gap-4 py-4;
+}
+
+.buttonGitHub {
+  @apply bg-gray-300 text-2xl p-2 hover:bg-green-500 hover:text-gray-50 rounded-md shadow-md transition-all duration-200 ease-in-out hover:shadow-green-900;
+}
+.buttonGlobe {
+  @apply bg-gray-300 text-2xl p-2 hover:bg-orange-500 hover:text-gray-50 rounded-md shadow-md transition-all duration-200 ease-in-out hover:shadow-orange-900;
+}
+
+.buttonTwitter{
+  @apply bg-gray-300 text-2xl p-2 hover:bg-blue-500 hover:text-blue-50 rounded-md shadow-md transition-all duration-200 hover:shadow-blue-900 ease-in-out;
+}

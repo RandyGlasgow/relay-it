@@ -1,5 +1,5 @@
 .container {
-  @apply mx-auto max-w-5xl text-center p-4;
+  @apply mx-auto max-w-5xl p-4;
 }
 
 .gridContainer {
