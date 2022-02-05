@@ -15,7 +15,7 @@ const LoadingExample = () => {
   useEffect(() => {
     setIsLoading(true);
     axios
-      .get('https://relay-it.com/api/\$\{statusCode\}/your-endpoint')
+      .get('https://relay-it.dev/api/\$\{statusCode\}/your-endpoint')
       .then(res => { setData(res.data) })
       .catch(err => { setError(err.response.data.message) })
       .finally(() => { setIsLoading(false) });
