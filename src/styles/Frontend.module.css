@@ -1,45 +1,50 @@
+.container {
+  @apply mx-auto max-w-5xl p-4;
+}
+
 .gridContainer {
   @apply grid grid-cols-2 gap-8 text-left;
 }
 
-.select {
-  @apply relative flex justify-end w-full;
+.header {
+  @apply text-left text-xl text-gray-800 font-semibold mb-2;
 }
 
-.button {
-  @apply text-gray-900 bg-white shadow-md p-2 flex items-center justify-center rounded-md gap-2 font-bold;
-}
-.buttonActive {
-  @apply rotate-180;
+.subheader {
+  @apply text-left text-lg text-gray-800 font-semibold;
 }
 
-.options {
-  @apply absolute shadow-md rounded-md bg-gray-50 max-w-max overflow-hidden origin-top-right top-12 right-0 w-max font-mono;
+.list {
+  @apply list-disc list-inside font-mono mt-2;
 }
 
 .item {
-  @apply py-1 px-2 cursor-pointer focus:bg-gray-100;
-}
-.selected {
-  @apply bg-green-500 text-gray-900 font-bold py-1 px-2 cursor-auto;
+  @apply flex justify-center items-center;
 }
 
-.inner {
-  @apply flex justify-start items-center gap-2
+.about {
+  @apply text-left text-gray-800 mb-4;
 }
 
-.response{
-  @apply text-center text-xl text-gray-800 font-semibold mt-6 h-24;
+.caption {
+  @apply text-center text-xl text-gray-800 font-semibold mt-6 mb-6;
 }
 
-.textarea{
-  @apply text-left text-xl text-gray-800 font-semibold mt-2 rounded-md px-2 h-24 w-full
+.requestButton {
+  @apply bg-lime-500 hover:bg-lime-700 text-white shadow-md font-bold py-1 px-2 rounded;
 }
 
-.controls{
-  @apply flex justify-between items-center;
+.toggleButton{
+  @apply bg-blue-500 hover:bg-blue-600 text-white shadow-md font-bold py-1 px-2 rounded;
 }
 
-.label{
-  @apply text-left text-xl text-gray-800 font-semibold mt-6 h-24;
+.controls {
+  @apply flex justify-between items-center my-2;
+}
+
+.snippets{
+  @apply flex flex-col justify-start gap-2 flex-shrink-0 flex-grow-0
+}
+.snippet{
+  @apply flex-shrink-0 flex-grow-0 flex-initial
 }

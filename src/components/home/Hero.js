@@ -1,7 +1,7 @@
-import Link from "next/link";
-import styles from "@/styles/Hero.module.css";
 import { FaArrowRight } from "react-icons/fa";
 import { useRef } from "react";
+import Link from "next/link";
+import styles from "@/styles/Hero.module.css";
 
 export default function Hero() {
   const httpRef = useRef();
@@ -10,8 +10,10 @@ export default function Hero() {
     // get the mouse position and the distance from the ref
     const { clientX, clientY } = e;
     const { current } = httpRef;
+
     // the location of the ref on the page
     const { x, y } = current.getBoundingClientRect();
+
     // euclidean distance from the mouse to the ref
     const distance = Math.sqrt(
       Math.pow(clientX - x, 2) + Math.pow(clientY - y, 2),

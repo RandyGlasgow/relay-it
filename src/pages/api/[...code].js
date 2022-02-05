@@ -12,6 +12,7 @@ function getResponse(code) {
  * @param {response} res 
  * @returns 
  */
+
 export default function handler(req, res) {
   // grab the desired response code
   const code = parseInt(req.query.code[0]);
@@ -29,6 +30,7 @@ export default function handler(req, res) {
   if (body) {
     return res.status(responseData.status).send(req.body);
   }
+
   // respond with the desired response status and its description
   return res.status(responseData.status).json(responseData);
 }

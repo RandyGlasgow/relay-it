@@ -1,0 +1,7 @@
+.container {
+  @apply mx-auto max-w-5xl p-4 text-center py-12 h-screen;
+}
+
+.heading{
+  @apply text-4xl text-gray-800 font-semibold mb-2;
+}
