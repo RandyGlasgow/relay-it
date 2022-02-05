@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+
 import Highlight from "react-highlight";
 import styles from "@/styles/CodeBlock.module.css";
 import "node_modules/highlight.js/styles/a11y-dark.css";

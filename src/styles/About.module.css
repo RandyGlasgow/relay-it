@@ -1,9 +1,13 @@
 .container {
-  @apply h-screen mx-auto max-w-5xl text-center p-4;
+  @apply mx-auto max-w-5xl text-center p-4;
 }
 
 .header {
   @apply text-center text-3xl text-gray-800 font-bold pt-20;
+}
+
+.subheader {
+  @apply text-left text-xl text-gray-800 font-semibold mb-2;
 }
 
 .quote {
@@ -17,6 +21,22 @@
   @apply grid grid-cols-2 gap-8  mt-10 text-left;
 }
 
-.gridContainer .list {
+.list {
   @apply list-disc list-inside;
+}
+
+.finalSell {
+  @apply text-center text-xl text-gray-800 font-semibold mt-6;
+}
+
+.refetch {
+  @apply text-center text-xl text-gray-800 font-semibold flex justify-center items-center gap-2 p-2;
+  @apply bg-lime-500 hover:bg-lime-400 text-gray-800 rounded-md shadow-md transition-all duration-100 ease-in-out;
+}
+
+.controls {
+  @apply flex justify-between items-center;
+}
+.select {
+  @apply text-left line-clamp-1 text-base text-gray-800 w-44 items-center gap-2 p-1 py-3 shadow-md rounded-md transition-all duration-100 ease-in-out cursor-pointer;
 }

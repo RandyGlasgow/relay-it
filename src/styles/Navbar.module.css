@@ -39,12 +39,16 @@
 }
 
 .smallDevice .menu {
-  @apply absolute right-0 mx-4 p-4 origin-top bg-white rounded-md focus:outline-transparent bg-opacity-70 shadow-md text-gray-900;
+  @apply absolute right-0 mx-4 p-2 origin-top bg-white rounded-md focus:outline-transparent bg-opacity-75 shadow-md text-gray-900;
+}
+
+.navButton {
+  @apply flex justify-between items-center gap-2 p-2 font-semibold font-mono rounded-md transform transition-all duration-100 ease-in-out;
+}
+.navButton:hover {
+  @apply flex justify-between items-center gap-2 shadow-inner bg-gray-600 bg-opacity-40;
 }
 
 .smallDevice .homeButton {
   @apply flex justify-between items-center gap-2;
-}
-.smallDevice .homeButton {
- 
 }

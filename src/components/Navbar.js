@@ -3,17 +3,8 @@ import Link from "next/link";
 import { FaBroadcastTower, FaGithubAlt } from "react-icons/fa";
 import { IoMenu } from "react-icons/io5";
 import { useState } from "react";
-
 import { Menu } from "@headlessui/react";
-
 import { useRouter } from "next/router";
-
-// menu options
-const menuOptions = [
-  { name: "Docs", href: "/docs" },
-  { name: "Examples", href: "/examples" },
-  { name: "Github", href: "#" },
-];
 
 const HomeButton = () => {
   return (
@@ -34,7 +25,7 @@ const GithubButton = ({ active }) => {
       target='_blank'
       rel='noopener noreferrer'
     >
-      <FaGithubAlt /> GitHub
+      GitHub
     </a>
   );
 };
@@ -77,6 +68,14 @@ const SmallDeviceMenu = () => {
 
           <Menu.Items>
             <div className={styles.menu}>
+              <Menu.Item>
+                <DocsButton />
+              </Menu.Item>
+
+              <Menu.Item>
+                <ExamplesButton />
+              </Menu.Item>
+
               <Menu.Item>
                 <GithubButton />
               </Menu.Item>
