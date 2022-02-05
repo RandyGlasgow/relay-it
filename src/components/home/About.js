@@ -3,7 +3,6 @@ import Link from "next/link";
 import Backend from "@/components/home/Backend";
 import Frontend from "@/components/home/Frontend";
 
-
 export default function About() {
   return (
     <>
@@ -21,12 +20,6 @@ export default function About() {
             .
           </p>
         </blockquote>
-      </section>
-      <section className={styles.container}>
-        <Backend />
-      </section>
-      <section className={styles.container}>
-        <Frontend />
       </section>
     </>
   );
