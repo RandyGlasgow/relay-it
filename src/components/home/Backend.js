@@ -5,7 +5,9 @@ const pythonCode = `# django-rest-framework
 # views.py
 class YourView(APIView):
   status_code = 503
+  
   url = f"http://relay-it.dev/api/{status_code}"
+
   
   def get(self, request, format=None):
     """ Your request handler. """
