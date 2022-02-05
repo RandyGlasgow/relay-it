@@ -1,5 +1,5 @@
-import styles from "@/styles/About.module.css";
 import CodeBlock from "@/components/CodeBlock";
+import styles from "@/styles/Backend.module.css";
 
 const pythonCode = `# django-rest-framework
 # views.py
@@ -22,10 +22,11 @@ class YourView(APIView):
     
     return Response(status=status.HTTP_200_OK)
 `;
-const AboutBackend = () => {
+
+const Snippet = () => {
   return (
-    <section className={styles.colLeft}>
-      <h2 className={styles.subheader}>It&apos;s simple.</h2>
+    <div>
+      <h2 className={styles.header}>It&apos;s simple.</h2>
       <ul className={styles.list}>
         <li>Use Relay-It and your endpoint</li>
         <li>Define your desired response code</li>
@@ -34,11 +35,11 @@ const AboutBackend = () => {
         <li>Replace the Relay-It endpoint with yours.</li>
         <li>Done</li>
       </ul>
-      <p className={styles.finalSell}>
+      <p className={styles.caption}>
         Writing good code shouldn&apos;t be hard. It&apos;s a matter of having
         the right tools for the job.
       </p>
-    </section>
+    </div>
   );
 };
 export default function Backend() {
@@ -46,7 +47,7 @@ export default function Backend() {
     <section className={styles.container}>
       <div className={styles.gridContainer}>
         <CodeBlock code={pythonCode} language='python' />
-        <AboutBackend />
+        <Snippet />
       </div>
     </section>
   );

@@ -1,83 +1,11 @@
-import CodeBlock from "@/components/CodeBlock";
-import styles from "@/styles/Frontend.module.css";
-import { useState, useCallback, useMemo } from "react";
-import axios from "axios";
 import { Switch } from "@headlessui/react";
-
-const javascriptCode = `// react.js
-// Loading.js
-const LoadingExample = () => {
-  const [networkStatus, setNetworkStatus] = useState({
-    isLoading: true,
-    error: null,
-    data: null,
-  });
-
-  useEffect(() => {
-    setNetworkStatus({isLoading: true, error: null, data: null});
-
-    const url = "http://relay-it.dev/api/503/your-endpoint";
-    const data = { name: "John Doe", age: 30 };
-
-    axios.post(url + "/api/v1/users/login", data)
-      .then(response => {
-        setNetworkStatus({ error: null, data: response.data })
-      })
-      .catch(error => {
-        setNetworkStatus({ error: error, data: null });
-      })
-      .finally(() => { 
-        setNetworkStatus({...networkStatus, isLoading: false });
-      });
-  }, []);
-
-  return (
-    <div>
-      {networkStatus.isLoading && <p>Loading...</p>}
-      {networkStatus.error && <p>{error}</p>}
-      {networkStatus.data && <p>{data.message}</p>}
-    </div>
-  )
-};
-`;
+import { useCallback, useState } from "react";
+import CodeBlock from "@/components/CodeBlock";
+import axios from "axios";
+import styles from "@/styles/Frontend.module.css";
 
 // snippet description
 const Snippet = () => {
-  const [data, setData] = useState({
-    status: 200,
-    name: "OK",
-    message:
-      "The request succeeded. The result meaning of 'Success' depends on the HTTP method",
-  });
-  const [toggle, setToggle] = useState(false);
-
-  const getData = useCallback(() => {
-    const url = document.location;
-    if (!toggle) {
-      axios
-        .post(url + "/api/300")
-        .then((res) => setData(res.data))
-        .catch((err) => setData(err.response.data));
-    } else {
-      axios
-        .post(url + "/api/200", { data: "custom" })
-        .then((res) => setData(res.data))
-        .catch((err) => setData(err.response.data));
-    }
-  }, [toggle]);
-
-  const Toggle = () => {
-    return (
-      <Switch
-        checked={toggle}
-        onChange={setToggle}
-        className={styles.toggleButton}
-      >
-        <span>Custom Data: {JSON.stringify(toggle)}</span>
-      </Switch>
-    );
-  };
-
   return (
     <div>
       <h3 className={styles.header}>Frontend, you have flexibility too.</h3>
