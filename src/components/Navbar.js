@@ -1,10 +1,10 @@
-import styles from "@/styles/Navbar.module.css";
-import Link from "next/link";
 import { FaBroadcastTower, FaGithubAlt } from "react-icons/fa";
 import { IoMenu } from "react-icons/io5";
-import { useState } from "react";
 import { Menu } from "@headlessui/react";
 import { useRouter } from "next/router";
+import { useState } from "react";
+import Link from "next/link";
+import styles from "@/styles/Navbar.module.css";
 
 const HomeButton = () => {
   return (
