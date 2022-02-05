@@ -1,10 +1,7 @@
 module.exports = {
   // set the jit to true to enable the JIT compiler
   // this is recommended for production
-  content: [
-    ".src/pages/**/*.{js,ts,jsx,tsx}",
-    ".src/components/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {},
   },
