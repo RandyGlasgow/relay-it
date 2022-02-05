@@ -1,0 +1,45 @@
+.gridContainer {
+  @apply grid grid-cols-2 gap-8 text-left;
+}
+
+.select {
+  @apply relative flex justify-end w-full;
+}
+
+.button {
+  @apply text-gray-900 bg-white shadow-md p-2 flex items-center justify-center rounded-md gap-2 font-bold;
+}
+.buttonActive {
+  @apply rotate-180;
+}
+
+.options {
+  @apply absolute shadow-md rounded-md bg-gray-50 max-w-max overflow-hidden origin-top-right top-12 right-0 w-max font-mono;
+}
+
+.item {
+  @apply py-1 px-2 cursor-pointer focus:bg-gray-100;
+}
+.selected {
+  @apply bg-green-500 text-gray-900 font-bold py-1 px-2 cursor-auto;
+}
+
+.inner {
+  @apply flex justify-start items-center gap-2
+}
+
+.response{
+  @apply text-center text-xl text-gray-800 font-semibold mt-6 h-24;
+}
+
+.textarea{
+  @apply text-left text-xl text-gray-800 font-semibold mt-2 rounded-md px-2 h-24 w-full
+}
+
+.controls{
+  @apply flex justify-between items-center;
+}
+
+.label{
+  @apply text-left text-xl text-gray-800 font-semibold mt-6 h-24;
+}
