@@ -26,16 +26,14 @@ const AboutBackend = () => {
   return (
     <section className={styles.colLeft}>
       <h2 className={styles.subheader}>It&apos;s simple.</h2>
-      <p>
-        <ul className={styles.list}>
-          <li>Use Relay-It and your endpoint</li>
-          <li>Define your desired response code</li>
-          <li>Build your logic</li>
-          <li>Repeat that process</li>
-          <li>Replace the Relay-It endpoint with yours.</li>
-          <li>Done</li>
-        </ul>
-      </p>
+      <ul className={styles.list}>
+        <li>Use Relay-It and your endpoint</li>
+        <li>Define your desired response code</li>
+        <li>Build your logic</li>
+        <li>Repeat the process</li>
+        <li>Replace the Relay-It endpoint with yours.</li>
+        <li>Done</li>
+      </ul>
       <p className={styles.finalSell}>
         Writing good code shouldn&apos;t be hard. It&apos;s a matter of having
         the right tools for the job.
@@ -45,9 +43,11 @@ const AboutBackend = () => {
 };
 export default function Backend() {
   return (
-    <div className={styles.gridContainer}>
-      <CodeBlock code={pythonCode} language='python' />
-      <AboutBackend />
-    </div>
+    <section className={styles.container}>
+      <div className={styles.gridContainer}>
+        <CodeBlock code={pythonCode} language='python' />
+        <AboutBackend />
+      </div>
+    </section>
   );
 }
