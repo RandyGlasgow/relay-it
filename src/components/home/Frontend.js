@@ -3,6 +3,7 @@ import { useCallback, useState } from "react";
 import CodeBlock from "@/components/CodeBlock";
 import axios from "axios";
 import styles from "@/styles/Frontend.module.css";
+import { CREATED_201 } from "@/data/response";
 
 // snippet description
 const Snippet = () => {
@@ -30,12 +31,7 @@ const Snippet = () => {
 };
 
 const SnippetOne = () => {
-  const [data, setData] = useState({
-    status: 200,
-    name: "OK",
-    message:
-      "The request succeeded. The result meaning of 'Success' depends on the HTTP method",
-  });
+  const [data, setData] = useState(CREATED_201);
   const [toggle, setToggle] = useState(false);
 
   const getData = useCallback(() => {
@@ -79,12 +75,7 @@ const SnippetOne = () => {
 };
 
 const SnippetTwo = () => {
-  const [data, setData] = useState({
-    status: 200,
-    name: "OK",
-    message:
-      "The request succeeded. The result meaning of 'Success' depends on the HTTP method",
-  });
+  const [data, setData] = useState(CREATED_201);
   const [toggle, setToggle] = useState(false);
 
   const getData = useCallback(() => {
