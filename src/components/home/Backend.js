@@ -1,5 +1,6 @@
 import CodeBlock from "@/components/CodeBlock";
 
+
 const pythonCode = `# django-rest-framework
 # views.py
 class YourView(APIView):
@@ -43,6 +44,8 @@ const Snippet = () => {
     </div>
   );
 };
+
+
 export default function Backend() {
   return (
     <section className='mx-auto max-w-5xl p-4'>

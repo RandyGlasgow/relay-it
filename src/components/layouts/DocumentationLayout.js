@@ -9,7 +9,6 @@ import { FaBroadcastTower, FaFileCode, FaGithubAlt } from "react-icons/fa";
 import { Fragment, useState } from "react";
 import { SearchIcon } from "@heroicons/react/solid";
 import Link from "next/link";
-import { Children } from "react";
 
 const navigation = [
   { name: "Home", href: "/", icon: HomeIcon, current: true, external: false },
