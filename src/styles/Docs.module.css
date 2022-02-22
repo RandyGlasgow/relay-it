@@ -1,0 +1,3 @@
+.gridCols {
+  @apply grid grid-cols-5;
+}
