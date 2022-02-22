@@ -1,27 +1,28 @@
+import { CREATED_201 } from "@/data/response";
 import { Switch } from "@headlessui/react";
 import { useCallback, useState } from "react";
 import CodeBlock from "@/components/CodeBlock";
 import axios from "axios";
-import styles from "@/styles/Frontend.module.css";
-import { CREATED_201 } from "@/data/response";
 
 // snippet description
 const Snippet = () => {
   return (
     <div>
-      <h3 className={styles.header}>Frontend, you have flexibility too.</h3>
-      <p className={styles.about}>
+      <h3 className='text-left text-xl text-gray-800 font-semibold mb-2'>
+        Frontend, you have flexibility too.
+      </h3>
+      <p className='text-left text-gray-800 mb-4'>
         Relay-It helps you build your frontend in a way that makes sense. You
         request data, you get data, you render the data. Why waste time trying
         to hard code your response types only to delete it later?
       </p>
-      <ul className={styles.list} id='support'>
+      <ul className='list-disc list-inside font-mono mt-2' id='support'>
         <li>Relay-It supports all HTTP methods</li>
         <li>Dynamic data responses</li>
         <li>Tuneable suspense times</li>
         <li>All from one convenient API</li>
       </ul>
-      <p className={styles.caption}>
+      <p className='text-center text-xl text-gray-800 font-semibold mt-6 mb-6'>
         Waste less time waiting for an API to be developed. Anticipate the API,
         the data, and the logic. Once you are ready to go live, change the
         domain.
@@ -54,7 +55,7 @@ const SnippetOne = () => {
       <Switch
         checked={toggle}
         onChange={setToggle}
-        className={styles.toggleButton}
+        className='bg-blue-500 hover:bg-blue-600 text-white shadow-md font-bold py-1 px-2 rounded'
       >
         <span>Custom Data: {JSON.stringify(toggle)}</span>
       </Switch>
@@ -63,8 +64,11 @@ const SnippetOne = () => {
 
   return (
     <div>
-      <div className={styles.controls}>
-        <button className={styles.requestButton} onClick={() => getData()}>
+      <div className='flex justify-between items-center my-2'>
+        <button
+          className='bg-lime-500 hover:bg-lime-700 text-white shadow-md font-bold py-1 px-2 rounded'
+          onClick={() => getData()}
+        >
           Request
         </button>
         <Toggle />
@@ -98,17 +102,20 @@ const SnippetTwo = () => {
       <Switch
         checked={toggle}
         onChange={setToggle}
-        className={styles.toggleButton}
+        className='bg-blue-500 hover:bg-blue-600 text-white shadow-md font-bold py-1 px-2 rounded'
       >
-        <span>Delay Response: {JSON.stringify(toggle)}</span>
+        <span>Delay: {JSON.stringify(toggle)}</span>
       </Switch>
     );
   };
 
   return (
-    <div className={styles.snippet}>
-      <div className={styles.controls}>
-        <button className={styles.requestButton} onClick={() => getData()}>
+    <div className='flex flex-col justify-start gap-2 flex-shrink-0 flex-grow-0'>
+      <div className='flex justify-between items-center my-2'>
+        <button
+          className='bg-lime-500 hover:bg-lime-700 text-white shadow-md font-bold py-1 px-2 rounded'
+          onClick={() => getData()}
+        >
           Request
         </button>
         <Toggle />
@@ -120,10 +127,10 @@ const SnippetTwo = () => {
 
 export default function Frontend() {
   return (
-    <section className={styles.container}>
-      <div className={styles.gridContainer}>
+    <section className='mx-auto max-w-5xl p-4'>
+      <div className='flex flex-col md:flex-row gap-8'>
         <Snippet />
-        <div className={styles.snippets}>
+        <div className='flex flex-col md:w-1/2 justify-start gap-2 flex-shrink-0 flex-grow-0'>
           <SnippetTwo />
           <SnippetOne />
         </div>
