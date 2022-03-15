@@ -1,6 +1,5 @@
 import "node_modules/highlight.js/styles/a11y-dark.css";
 import Highlight from "react-highlight";
-import styles from "@/styles/CodeBlock.module.css";
 
 export default function CodeBlock({ code, language }) {
   return (
