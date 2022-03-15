@@ -343,6 +343,79 @@ export const UNAVAILABLE_FOR_LEGAL_REASONS_451 = {
     "The user agent requested a resource that cannot legally be provided, such as a web page censored by a government.",
 };
 
+export const INTERNAL_SERVER_ERROR_500 = {
+  status: 500,
+  name: "Internal Server Error",
+  message: "The server encountered an unexpected condition that prevented it from fulfilling the request.",
+};
+
+export const NOT_IMPLEMENTED_501 = {
+  status: 501,
+  name: "Not Implemented",
+  message: "The request method is not supported by the server and cannot be handled. The only methods that servers are required to support (and therefore that must not return this code) are GET and HEAD.",
+};
+
+export const BAD_GATEWAY_502 = {
+  status: 502,
+  name: "Bad Gateway",
+  message: "This error response means that the server, while working as a gateway to get a response needed to handle the request, got an invalid response.",
+};
+
+export const SERVICE_UNAVAILABLE_503 = {
+  status: 503,
+  name: "Service Unavailable",
+  message:
+    "The server is currently unable to handle the request due to a temporary overloading or maintenance of the server. The implication is that this is a temporary condition which will be alleviated after some delay.",
+};
+
+export const GATEWAY_TIMEOUT_504 = {
+  status: 504,
+  name: "Gateway Timeout",
+  message:
+    "This error response is given when the server is acting as a gateway and cannot get a response in time."
+};
+
+export const HTTP_VERSION_NOT_SUPPORTED_505 = {
+  status: 505,
+  name: "HTTP Version Not Supported",
+  message:
+    "The HTTP version used in the request is not supported by the server.",
+};
+
+export const VARIANT_ALSO_NEGOTIATES_506 = {
+  status: 506,
+  name: "Variant Also Negotiates",
+  message:
+    "The server has an internal configuration error: the chosen variant resource is configured to engage in transparent content negotiation itself, and is therefore not a proper end point in the negotiation process.",
+};
+
+export const INSUFFICIENT_STORAGE_507 = {
+  status: 507,
+  name: "Insufficient Storage",
+  message:
+    "The method could not be performed on the resource because the server is unable to store the representation needed to successfully complete the request.",
+};
+
+export const LOOP_DETECTED_508 = {
+  status: 508,
+  name: "Loop Detected",
+  message:
+    "The server detected an infinite loop while processing the request (sent in lieu of 208 Already Reported).",
+};
+
+export const NOT_EXTENDED_510 = {
+  status: 510,
+  name: "Not Extended",
+  message:
+    "Further extensions to the request are required for the server to fulfill it.",
+};
+
+export const NETWORK_AUTHENTICATION_REQUIRED_511 = {
+  status: 511,
+  name: "Network Authentication Required",
+  message: "The client needs to authenticate to gain network access.",
+};
+
 export const response = {
   100: CONTINUE_100,
   101: SWITCHING_PROTOCOLS_101,
@@ -397,4 +470,16 @@ export const response = {
   429: TOO_MANY_REQUESTS_429,
   431: REQUEST_HEADER_FIELDS_TOO_LARGE_431,
   451: UNAVAILABLE_FOR_LEGAL_REASONS_451,
+
+  500: INTERNAL_SERVER_ERROR_500,
+  501: NOT_IMPLEMENTED_501,
+  502: BAD_GATEWAY_502,
+  503: SERVICE_UNAVAILABLE_503,
+  504: GATEWAY_TIMEOUT_504,
+  505: HTTP_VERSION_NOT_SUPPORTED_505,
+  506: VARIANT_ALSO_NEGOTIATES_506,
+  507: INSUFFICIENT_STORAGE_507,
+  508: LOOP_DETECTED_508,
+  510: NOT_EXTENDED_510,
+  511: NETWORK_AUTHENTICATION_REQUIRED_511,
 };

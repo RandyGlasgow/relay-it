@@ -1,4 +1,6 @@
 import styles from "@/styles/Closing.module.css";
+
+
 export default function Closing() {
   return (
     <section className={styles.container}>
