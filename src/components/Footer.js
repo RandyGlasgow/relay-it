@@ -3,7 +3,7 @@ import { FaGithubAlt, FaGlobe, FaTwitter } from "react-icons/fa";
 export default function Footer() {
   return (
     <footer>
-      <div className='mx-auto p-4 text-center py-12 bg-blue-50'>
+      <div className='mx-auto p-4 text-center py-12 bg-gray-100'>
         <h1 className='text-xl font-bold border-t pt-6'>
           Relay-It is a project by Randy Glasgow.
         </h1>
